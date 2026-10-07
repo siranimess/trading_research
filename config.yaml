@@ -1,0 +1,21 @@
+experiment:
+  seed: 42
+  rounds: 3
+  proposals_per_round: 3
+  subprocess_timeout_seconds: 30
+
+data:
+  tickers:
+    - SPY
+    - QQQ
+    - IWM
+  start: "2014-01-01"
+  end: "2026-01-01"
+  train_end: "2019-12-31"
+  validation_end: "2022-12-31"
+  transaction_cost_bps: 5.0
+
+selection:
+  min_validation_sharpe: 0.50
+  max_validation_drawdown: 0.30
+  max_annual_turnover: 30.0
